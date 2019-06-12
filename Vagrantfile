@@ -68,4 +68,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # sudo usermod -aG sudo thechief
   SHELL
 
+  config.vm.provision "shell" do |nginx|
+    nginx.path = ".provision/nginx-bootstrap.sh"
+  end
+
 end

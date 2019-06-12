@@ -1,0 +1,14 @@
+server {
+  listen 80;
+  listen [::]:80;
+
+  root /var/www/domain2.net;
+
+  index index.html index.htm;
+
+  server_name domain2.net www.domain2.net;
+
+  location / {
+    try_files $uri $uri/ =404;
+  }
+}
